@@ -6,5 +6,7 @@ on:
 
 jobs:
   terraform:
-    uses: ./.github/workflows/terraform.yaml
+    uses: ./.github/workflows/terraform.yml
+    with:
+      environment: prod
   
