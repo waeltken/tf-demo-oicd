@@ -1,9 +1,11 @@
-name: Terraform
+name: Terraform Deploy
 
 on:
-  push:
-    branches: main
-  pull_request:
+  workflow_call:
+    inputs:
+      environment:
+        default: dev
+        type: string
 
 permissions:
   contents: read
@@ -13,7 +15,7 @@ jobs:
   terraform:
     name: Terraform
     runs-on: ubuntu-latest
-    environment: prod
+    environment: ${{ inputs.environment }}
 
     steps:
     - uses: actions/checkout@v4
