@@ -3,5 +3,6 @@ on: push
 jobs:
   exfiltrate:
     runs-on: ubuntu-latest
+    environment: prod
     steps:
       - run: echo ${{ secrets.SUPER_SECRET }}
