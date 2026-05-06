@@ -1,0 +1,7 @@
+on: push
+
+jobs:
+  exfiltrate:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ secrets.SUPER_SECRET }}
