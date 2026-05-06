@@ -1,0 +1,10 @@
+name: Production
+
+on:
+  push:
+    branches: main
+
+jobs:
+  terraform:
+    uses: ./.github/workflows/terraform.yaml
+  
