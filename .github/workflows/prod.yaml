@@ -9,6 +9,7 @@ jobs:
     uses: ./.github/workflows/terraform.yml
     permissions:
       id-token: write
+      contents: read
     with:
       environment: prod
   
