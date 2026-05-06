@@ -7,6 +7,8 @@ on:
 jobs:
   terraform:
     uses: ./.github/workflows/terraform.yml
+    permissions:
+      id-token: write
     with:
       environment: prod
   
